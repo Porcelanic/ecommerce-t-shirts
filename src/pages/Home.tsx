@@ -69,7 +69,7 @@ export const Home: React.FC = () => {
                 <Truck className="h-8 w-8 text-accent-foreground" />
               </div>
               <h3 className="text-lg font-semibold mb-2">Envío Gratis</h3>
-              <p className="text-muted-foreground">En pedidos superiores a €50. Entrega en 24-48h.</p>
+              <p className="text-muted-foreground">En pedidos superiores a $50. Entrega en 24-48h.</p>
             </div>
             
             <div className="text-center group">

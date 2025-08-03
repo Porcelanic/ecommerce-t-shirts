@@ -22,7 +22,7 @@ export const Header: React.FC = () => {
             <div className="h-8 w-8 rounded-lg bg-gradient-hero flex items-center justify-center">
               <span className="text-primary-foreground font-bold text-sm">TS</span>
             </div>
-            <span className="text-xl font-bold text-foreground">TeeShack</span>
+            <span className="text-xl font-bold text-foreground">Ecommerce T-shirts</span>
           </Link>
 
           {/* Navigation */}

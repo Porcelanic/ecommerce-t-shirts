@@ -93,8 +93,8 @@ export const Auth: React.FC = () => {
               </CardTitle>
               <CardDescription>
                 {isLogin 
-                  ? 'Ingresa a tu cuenta de TeeShack' 
-                  : 'Únete a la comunidad TeeShack'
+                  ? 'Ingresa a tu cuenta' 
+                  : 'Únete a la comunidad'
                 }
               </CardDescription>
             </div>

@@ -343,7 +343,7 @@ export const Checkout: React.FC = () => {
                           {item.size} · {item.color} · Qty: {item.quantity}
                         </p>
                         <p className="text-sm font-medium">
-                          €{(item.price * item.quantity).toFixed(2)}
+                          ${(item.price * item.quantity).toFixed(2)}
                         </p>
                       </div>
                     </div>
@@ -356,19 +356,19 @@ export const Checkout: React.FC = () => {
                 <div className="space-y-2">
                   <div className="flex justify-between text-sm">
                     <span>Subtotal</span>
-                    <span>€{getTotalPrice().toFixed(2)}</span>
+                    <span>${getTotalPrice().toFixed(2)}</span>
                   </div>
                   
                   <div className="flex justify-between text-sm">
                     <span>Envío</span>
                     <span className={shipping === 0 ? 'text-green-600' : ''}>
-                      {shipping === 0 ? 'GRATIS' : `€${shipping.toFixed(2)}`}
+                      {shipping === 0 ? 'GRATIS' : `$${shipping.toFixed(2)}`}
                     </span>
                   </div>
                   
                   <div className="flex justify-between text-sm">
                     <span>IVA (21%)</span>
-                    <span>€{tax.toFixed(2)}</span>
+                    <span>${tax.toFixed(2)}</span>
                   </div>
                 </div>
 
@@ -376,7 +376,7 @@ export const Checkout: React.FC = () => {
 
                 <div className="flex justify-between font-bold text-lg">
                   <span>Total</span>
-                  <span>€{finalTotal.toFixed(2)}</span>
+                  <span>${finalTotal.toFixed(2)}</span>
                 </div>
 
                 {/* Security Features */}
@@ -387,7 +387,7 @@ export const Checkout: React.FC = () => {
                   </div>
                   <div className="flex items-center gap-2 text-sm text-muted-foreground">
                     <Truck className="h-4 w-4" />
-                    <span>Envío gratis en pedidos +€50</span>
+                    <span>Envío gratis en pedidos +$50</span>
                   </div>
                 </div>
 

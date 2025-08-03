@@ -147,10 +147,10 @@ export const Cart: React.FC = () => {
 
                         <div className="text-right">
                           <p className="text-sm text-muted-foreground">
-                            €{item.price.toFixed(2)} c/u
+                            ${item.price.toFixed(2)} c/u
                           </p>
                           <p className="font-bold text-lg">
-                            €{(item.price * item.quantity).toFixed(2)}
+                            ${(item.price * item.quantity).toFixed(2)}
                           </p>
                         </div>
                       </div>
@@ -173,19 +173,19 @@ export const Cart: React.FC = () => {
               <div className="space-y-2">
                 <div className="flex justify-between text-sm">
                   <span>Subtotal ({getTotalItems()} productos)</span>
-                  <span>€{getTotalPrice().toFixed(2)}</span>
+                  <span>${getTotalPrice().toFixed(2)}</span>
                 </div>
                 
                 <div className="flex justify-between text-sm">
                   <span>Envío</span>
                   <span className={shipping === 0 ? 'text-green-600' : ''}>
-                    {shipping === 0 ? 'GRATIS' : `€${shipping.toFixed(2)}`}
+                    {shipping === 0 ? 'GRATIS' : `$${shipping.toFixed(2)}`}
                   </span>
                 </div>
 
                 {shipping > 0 && (
                   <p className="text-xs text-muted-foreground">
-                    Envío gratis en pedidos superiores a €50
+                    Envío gratis en pedidos superiores a $50
                   </p>
                 )}
               </div>
@@ -194,7 +194,7 @@ export const Cart: React.FC = () => {
 
               <div className="flex justify-between font-bold text-lg">
                 <span>Total</span>
-                <span>€{finalTotal.toFixed(2)}</span>
+                <span>${finalTotal.toFixed(2)}</span>
               </div>
             </CardContent>
             

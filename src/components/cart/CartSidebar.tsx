@@ -104,7 +104,7 @@ export const CartSidebar: React.FC = () => {
                         
                         <div className="flex items-center gap-2">
                           <span className="font-medium text-sm">
-                            €{(item.price * item.quantity).toFixed(2)}
+                            ${(item.price * item.quantity).toFixed(2)}
                           </span>
                           <Button
                             variant="ghost"
@@ -128,7 +128,7 @@ export const CartSidebar: React.FC = () => {
             <div className="p-6 border-t space-y-4">
               <div className="flex items-center justify-between text-lg font-semibold">
                 <span>Total:</span>
-                <span>€{getTotalPrice().toFixed(2)}</span>
+                <span>${getTotalPrice().toFixed(2)}</span>
               </div>
               
               <div className="space-y-2">

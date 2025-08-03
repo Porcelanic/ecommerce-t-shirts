@@ -175,11 +175,11 @@ export const ProductDetail: React.FC = () => {
           {/* Price */}
           <div className="flex items-center gap-3">
             <span className="text-3xl font-bold text-price">
-              €{product.price.toFixed(2)}
+              ${product.price.toFixed(2)}
             </span>
             {product.originalPrice && (
               <span className="text-xl text-muted-foreground line-through">
-                €{product.originalPrice.toFixed(2)}
+                ${product.originalPrice.toFixed(2)}
               </span>
             )}
           </div>
@@ -254,7 +254,7 @@ export const ProductDetail: React.FC = () => {
               <Truck className="h-5 w-5 text-primary" />
               <div>
                 <p className="font-medium text-sm">Envío Gratis</p>
-                <p className="text-xs text-muted-foreground">Pedidos +€50</p>
+                <p className="text-xs text-muted-foreground">Pedidos +$50</p>
               </div>
             </div>
             
@@ -314,7 +314,7 @@ export const ProductDetail: React.FC = () => {
                   <p className="text-muted-foreground">Fabricado en España</p>
                 </div>
               </div>
-            </div>
+            </div>    
           </TabsContent>
           
           <TabsContent value="care" className="mt-6">
