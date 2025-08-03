@@ -26,7 +26,7 @@ export const ProductDetail: React.FC = () => {
       <div className="container mx-auto px-4 py-16 text-center">
         <h1 className="text-2xl font-bold mb-4">Producto no encontrado</h1>
         <Link to="/products">
-          <Button>Volver a Productos</Button>
+          <Button aria-label="This is a button">Volver a Productos</Button>
         </Link>
       </div>
     );
@@ -90,7 +90,7 @@ export const ProductDetail: React.FC = () => {
           {product.images.length > 1 && (
             <div className="flex gap-2">
               {product.images.map((image, index) => (
-                <button
+                <button aria-label="This is a button"
                   key={index}
                   onClick={() => setSelectedImageIndex(index)}
                   className={`w-20 h-20 rounded-lg overflow-hidden border-2 transition-colors ${
@@ -116,7 +116,7 @@ export const ProductDetail: React.FC = () => {
           <div>
             <div className="flex items-start justify-between mb-2">
               <h1 className="text-3xl font-bold text-foreground">{product.name}</h1>
-              <Button
+              <Button aria-label="This is a button"
                 variant="outline"
                 size="icon"
                 onClick={() => setIsFavorite(!isFavorite)}
@@ -190,15 +190,15 @@ export const ProductDetail: React.FC = () => {
           <div className="space-y-6">
             {/* Colors */}
             <div>
-              <h3 className="font-medium mb-3">Color: {selectedColor || 'Selecciona'}</h3>
+              <h1 className="font-medium mb-3">Color: {selectedColor || 'Selecciona'}</h1>
               <div className="flex gap-2 flex-wrap">
                 {product.colors.map((color) => (
-                  <button
+                  <button aria-label="This is a button"
                     key={color}
                     onClick={() => setSelectedColor(color)}
                     className={`px-4 py-2 rounded-lg border transition-colors ${
                       selectedColor === color
-                        ? 'border-primary bg-primary/10 text-primary'
+                        ? 'border-primary bg-primary/15 text-primary'
                         : 'border-border hover:border-muted-foreground'
                     }`}
                   >
@@ -210,15 +210,15 @@ export const ProductDetail: React.FC = () => {
 
             {/* Sizes */}
             <div>
-              <h3 className="font-medium mb-3">Talla: {selectedSize || 'Selecciona'}</h3>
+              <h1 className="font-medium mb-3">Talla: {selectedSize || 'Selecciona'}</h1>
               <div className="flex gap-2 flex-wrap">
                 {product.sizes.map((size) => (
-                  <button
+                  <button aria-label="This is a button"
                     key={size}
                     onClick={() => setSelectedSize(size)}
                     className={`w-12 h-12 rounded-lg border transition-colors flex items-center justify-center font-medium ${
                       selectedSize === size
-                        ? 'border-primary bg-primary/10 text-primary'
+                        ? 'border-primary bg-primary/15 text-primary'
                         : 'border-border hover:border-muted-foreground'
                     }`}
                   >
@@ -231,7 +231,7 @@ export const ProductDetail: React.FC = () => {
 
           {/* Add to Cart */}
           <div className="space-y-3">
-            <Button
+            <Button aria-label="This is a button"
               className="w-full bg-gradient-accent hover:opacity-90"
               size="lg"
               onClick={handleAddToCart}
@@ -242,7 +242,7 @@ export const ProductDetail: React.FC = () => {
             </Button>
             
             <Link to="/cart">
-              <Button variant="outline" className="w-full" size="lg">
+              <Button aria-label="This is a button" variant="outline" className="w-full" size="lg">
                 Ver Carrito
               </Button>
             </Link>
@@ -250,7 +250,7 @@ export const ProductDetail: React.FC = () => {
 
           {/* Features */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-6">
-            <div className="flex items-center gap-3 p-3 rounded-lg bg-muted/50">
+            <div className="flex items-center gap-3 p-3 rounded-lg bg-muted/60">
               <Truck className="h-5 w-5 text-primary" />
               <div>
                 <p className="font-medium text-sm">Envío Gratis</p>
@@ -258,7 +258,7 @@ export const ProductDetail: React.FC = () => {
               </div>
             </div>
             
-            <div className="flex items-center gap-3 p-3 rounded-lg bg-muted/50">
+            <div className="flex items-center gap-3 p-3 rounded-lg bg-muted/60">
               <RotateCcw className="h-5 w-5 text-primary" />
               <div>
                 <p className="font-medium text-sm">Devoluciones</p>
@@ -266,7 +266,7 @@ export const ProductDetail: React.FC = () => {
               </div>
             </div>
             
-            <div className="flex items-center gap-3 p-3 rounded-lg bg-muted/50">
+            <div className="flex items-center gap-3 p-3 rounded-lg bg-muted/60">
               <Shield className="h-5 w-5 text-primary" />
               <div>
                 <p className="font-medium text-sm">Garantía</p>

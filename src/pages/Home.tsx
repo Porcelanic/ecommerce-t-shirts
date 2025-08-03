@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { ArrowRight, Star, Truck, Shield, Headphones } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -9,6 +9,10 @@ import heroImage from '@/assets/hero-tshirts.jpg';
 
 export const Home: React.FC = () => {
   const featuredProducts = productsData.filter(product => product.featured).slice(0, 4);
+
+  useEffect(() => {
+    document.title = 'catalog';
+  }, []);
 
   return (
     <div className="min-h-screen">
@@ -27,26 +31,26 @@ export const Home: React.FC = () => {
               Nueva Colección 2024
             </Badge>
             
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
+            <h1 className="text-accent-foreground text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
               Estilo que 
               <span className="block bg-gradient-accent bg-clip-text text-transparent">
                 Te Define
               </span>
             </h1>
             
-            <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90 max-w-2xl mx-auto animate-slide-up">
+            <p className="text-xl md:text-2xl mb-8 text-accent-foreground max-w-2xl mx-auto animate-slide-up">
               Descubre nuestra colección de camisetas premium. Calidad excepcional, 
               diseños únicos y comodidad sin igual.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-bounce-in">
               <Link to="/products">
-                <Button size="lg" className="bg-accent hover:bg-accent-hover text-accent-foreground">
+                <Button aria-label="This is a button" size="lg" className="bg-accent hover:bg-accent-hover text-accent-foreground">
                   Explorar Colección
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
-              <Button variant="outline" size="lg" className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10">
+              <Button aria-label="This is a button" variant="outline" size="lg" className="bg-accent border-primary-foreground/30 text-accent-foreground hover:bg-primary-foreground/20">
                 Ver Ofertas
               </Button>
             </div>
@@ -61,14 +65,14 @@ export const Home: React.FC = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-16 bg-muted/40">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center group">
               <div className="w-16 h-16 mx-auto mb-4 bg-gradient-accent rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
                 <Truck className="h-8 w-8 text-accent-foreground" />
               </div>
-              <h3 className="text-lg font-semibold mb-2">Envío Gratis</h3>
+              <h1 className="text-lg font-semibold mb-2">Envío Gratis</h1>
               <p className="text-muted-foreground">En pedidos superiores a $50. Entrega en 24-48h.</p>
             </div>
             
@@ -76,7 +80,7 @@ export const Home: React.FC = () => {
               <div className="w-16 h-16 mx-auto mb-4 bg-gradient-accent rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
                 <Shield className="h-8 w-8 text-accent-foreground" />
               </div>
-              <h3 className="text-lg font-semibold mb-2">Garantía de Calidad</h3>
+              <h1 className="text-lg font-semibold mb-2">Garantía de Calidad</h1>
               <p className="text-muted-foreground">30 días para cambios y devoluciones sin preguntas.</p>
             </div>
             
@@ -84,7 +88,7 @@ export const Home: React.FC = () => {
               <div className="w-16 h-16 mx-auto mb-4 bg-gradient-accent rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
                 <Headphones className="h-8 w-8 text-accent-foreground" />
               </div>
-              <h3 className="text-lg font-semibold mb-2">Soporte 24/7</h3>
+              <h1 className="text-lg font-semibold mb-2">Soporte 24/7</h1>
               <p className="text-muted-foreground">Asistencia personalizada cuando la necesites.</p>
             </div>
           </div>
@@ -119,7 +123,7 @@ export const Home: React.FC = () => {
           
           <div className="text-center">
             <Link to="/products">
-              <Button size="lg" variant="outline">
+              <Button aria-label="This is a button" size="lg" variant="outline">
                 Ver Toda la Colección
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
@@ -133,23 +137,23 @@ export const Home: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl font-bold mb-2">50K+</div>
-              <div className="text-primary-foreground/80">Clientes Felices</div>
+              <div className="text-accent-foreground text-4xl font-bold mb-2">50K+</div>
+              <div className="text-accent-foreground">Clientes Felices</div>
             </div>
             <div>
-              <div className="text-4xl font-bold mb-2">100+</div>
-              <div className="text-primary-foreground/80">Diseños Únicos</div>
+              <div className="text-accent-foreground text-4xl font-bold mb-2">100+</div>
+              <div className="text-accent-foreground">Diseños Únicos</div>
             </div>
             <div>
-              <div className="text-4xl font-bold mb-2">4.9</div>
-              <div className="text-primary-foreground/80 flex items-center justify-center gap-1">
+              <div className="text-accent-foreground text-4xl font-bold mb-2">4.9</div>
+              <div className="text-accent-foreground flex items-center justify-center gap-1">
                 <Star className="h-4 w-4 fill-current" />
                 Valoración
               </div>
             </div>
             <div>
-              <div className="text-4xl font-bold mb-2">24h</div>
-              <div className="text-primary-foreground/80">Envío Express</div>
+              <div className="text-accent-foreground text-4xl font-bold mb-2">24h</div>
+              <div className="text-accent-foreground">Envío Express</div>
             </div>
           </div>
         </div>

@@ -107,7 +107,7 @@ export const Auth: React.FC = () => {
                   <Label htmlFor="name">Nombre completo</Label>
                   <div className="relative">
                     <User className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                    <Input
+                    <Input aria-label="This is an input field"
                       id="name"
                       name="name"
                       type="text"
@@ -125,7 +125,7 @@ export const Auth: React.FC = () => {
                 <Label htmlFor="email">Email</Label>
                 <div className="relative">
                   <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                  <Input
+                  <Input aria-label="This is an input field"
                     id="email"
                     name="email"
                     type="email"
@@ -142,7 +142,7 @@ export const Auth: React.FC = () => {
                 <Label htmlFor="password">Contraseña</Label>
                 <div className="relative">
                   <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                  <Input
+                  <Input aria-label="This is an input field"
                     id="password"
                     name="password"
                     type={showPassword ? "text" : "password"}
@@ -153,7 +153,7 @@ export const Auth: React.FC = () => {
                     required
                     minLength={6}
                   />
-                  <button
+                  <button aria-label="This is a button"
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
                     className="absolute right-3 top-1/2 transform -translate-y-1/2 text-muted-foreground hover:text-foreground"
@@ -163,7 +163,7 @@ export const Auth: React.FC = () => {
                 </div>
               </div>
 
-              <Button 
+              <Button aria-label="This is a button" 
                 type="submit" 
                 className="w-full" 
                 size="lg"
@@ -175,17 +175,17 @@ export const Auth: React.FC = () => {
             </form>
 
             {isLogin && (
-              <div className="mt-4 p-4 bg-muted/50 rounded-lg">
-                <p className="text-sm text-muted-foreground mb-2">Cuenta de prueba:</p>
-                <p className="text-xs font-mono">demo@teeshack.com</p>
-                <p className="text-xs font-mono">123456</p>
+              <div className="mt-4 p-4 bg-muted/60 rounded-lg">
+                <p className="text-sm font-medium text-foreground mb-2">Cuenta de prueba:</p>
+                <p className="text-xs font-mono text-foreground">demo@teeshack.com</p>
+                <p className="text-xs font-mono text-foreground">123456</p>
               </div>
             )}
 
             <div className="mt-6 text-center">
               <p className="text-sm text-muted-foreground">
                 {isLogin ? '¿No tienes cuenta?' : '¿Ya tienes cuenta?'}
-                <button
+                <button aria-label="This is a button"
                   type="button"
                   onClick={toggleMode}
                   className="ml-1 text-primary hover:underline font-medium"

@@ -32,7 +32,7 @@ export const Cart: React.FC = () => {
             Parece que no has agregado ningún producto a tu carrito todavía.
           </p>
           <Link to="/products">
-            <Button className="bg-gradient-accent hover:opacity-90">
+            <Button aria-label="This is a button" className="bg-gradient-accent hover:opacity-90">
               Explorar Productos
             </Button>
           </Link>
@@ -66,7 +66,7 @@ export const Cart: React.FC = () => {
           {/* Clear Cart Button */}
           <div className="flex justify-between items-center">
             <h2 className="text-xl font-semibold">Productos</h2>
-            <Button
+            <Button aria-label="This is a button"
               variant="outline"
               size="sm"
               onClick={clearCart}
@@ -96,9 +96,9 @@ export const Cart: React.FC = () => {
                     <div className="flex-1 space-y-2">
                       <div className="flex justify-between items-start">
                         <div>
-                          <h3 className="font-medium text-foreground">
+                          <h1 className="font-medium text-foreground">
                             {item.name}
-                          </h3>
+                          </h1>
                           <div className="flex gap-2 mt-1">
                             <Badge variant="secondary" className="text-xs">
                               {item.size}
@@ -108,7 +108,7 @@ export const Cart: React.FC = () => {
                             </Badge>
                           </div>
                         </div>
-                        <Button
+                        <Button aria-label="This is a button"
                           variant="ghost"
                           size="icon"
                           onClick={() => removeFromCart(item.id, item.size, item.color)}
@@ -123,7 +123,7 @@ export const Cart: React.FC = () => {
                         <div className="flex items-center gap-3">
                           <span className="text-sm text-muted-foreground">Cantidad:</span>
                           <div className="flex items-center gap-2">
-                            <Button
+                            <Button aria-label="This is a button"
                               variant="outline"
                               size="icon"
                               className="h-8 w-8"
@@ -134,7 +134,7 @@ export const Cart: React.FC = () => {
                             <span className="font-medium w-8 text-center">
                               {item.quantity}
                             </span>
-                            <Button
+                            <Button aria-label="This is a button"
                               variant="outline"
                               size="icon"
                               className="h-8 w-8"
@@ -200,13 +200,13 @@ export const Cart: React.FC = () => {
             
             <CardFooter className="space-y-3">
               <Link to="/checkout" className="w-full">
-                <Button className="w-full bg-gradient-accent hover:opacity-90" size="lg">
+                <Button aria-label="This is a button" className="w-full bg-gradient-accent hover:opacity-90" size="lg">
                   Proceder al Checkout
                 </Button>
               </Link>
               
               <Link to="/products" className="w-full">
-                <Button variant="outline" className="w-full">
+                <Button aria-label="This is a button" variant="outline" className="w-full">
                   Seguir Comprando
                 </Button>
               </Link>

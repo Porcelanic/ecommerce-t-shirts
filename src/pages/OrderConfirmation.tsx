@@ -53,31 +53,31 @@ export const OrderConfirmation: React.FC = () => {
 
         {/* Next Steps */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-          <div className="text-center p-6 rounded-lg bg-muted/50">
-            <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div className="text-center p-6 rounded-lg bg-muted/60">
+            <div className="w-12 h-12 bg-primary/15 rounded-full flex items-center justify-center mx-auto mb-4">
               <Mail className="h-6 w-6 text-primary" />
             </div>
-            <h3 className="font-semibold mb-2">Confirmación por Email</h3>
+            <h1 className="font-semibold mb-2">Confirmación por Email</h1>
             <p className="text-sm text-muted-foreground">
               Recibirás un email de confirmación con los detalles de tu pedido
             </p>
           </div>
 
-          <div className="text-center p-6 rounded-lg bg-muted/50">
-            <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div className="text-center p-6 rounded-lg bg-muted/60">
+            <div className="w-12 h-12 bg-primary/15 rounded-full flex items-center justify-center mx-auto mb-4">
               <Package className="h-6 w-6 text-primary" />
             </div>
-            <h3 className="font-semibold mb-2">Preparación</h3>
+            <h1 className="font-semibold mb-2">Preparación</h1>
             <p className="text-sm text-muted-foreground">
               Tu pedido será preparado y empaquetado en nuestro almacén
             </p>
           </div>
 
-          <div className="text-center p-6 rounded-lg bg-muted/50">
-            <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div className="text-center p-6 rounded-lg bg-muted/60">
+            <div className="w-12 h-12 bg-primary/15 rounded-full flex items-center justify-center mx-auto mb-4">
               <Truck className="h-6 w-6 text-primary" />
             </div>
-            <h3 className="font-semibold mb-2">Envío</h3>
+            <h1 className="font-semibold mb-2">Envío</h1>
             <p className="text-sm text-muted-foreground">
               Te notificaremos cuando tu pedido sea enviado con el código de seguimiento
             </p>
@@ -87,32 +87,32 @@ export const OrderConfirmation: React.FC = () => {
         {/* Actions */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link to="/products">
-            <Button className="w-full sm:w-auto bg-gradient-accent hover:opacity-90">
+            <Button aria-label="This is a button" className="w-full sm:w-auto bg-gradient-accent hover:opacity-90">
               Seguir Comprando
             </Button>
           </Link>
           
           <Link to="/">
-            <Button variant="outline" className="w-full sm:w-auto">
+            <Button aria-label="This is a button" variant="outline" className="w-full sm:w-auto">
               Volver al Inicio
             </Button>
           </Link>
         </div>
 
         {/* Support */}
-        <div className="mt-12 p-6 rounded-lg bg-muted/30">
-          <h3 className="font-semibold mb-2">¿Necesitas ayuda?</h3>
+        <div className="mt-12 p-6 rounded-lg bg-muted/40">
+          <h1 className="font-semibold mb-2">¿Necesitas ayuda?</h1>
           <p className="text-sm text-muted-foreground mb-4">
             Si tienes alguna pregunta sobre tu pedido, no dudes en contactarnos.
           </p>
           <div className="flex flex-col sm:flex-row gap-2 justify-center">
-            <Button variant="outline" size="sm">
+            <Button aria-label="This is a button" variant="outline" size="sm">
               Chat en Vivo
             </Button>
-            <Button variant="outline" size="sm">
+            <Button aria-label="This is a button" variant="outline" size="sm">
               Enviar Email
             </Button>
-            <Button variant="outline" size="sm">
+            <Button aria-label="This is a button" variant="outline" size="sm">
               Llamar: +34 123 456 789
             </Button>
           </div>

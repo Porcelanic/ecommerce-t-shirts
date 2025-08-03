@@ -45,7 +45,7 @@ export const Checkout: React.FC = () => {
           Agrega algunos productos antes de proceder al checkout
         </p>
         <Link to="/products">
-          <Button>Explorar Productos</Button>
+          <Button aria-label="This is a button">Explorar Productos</Button>
         </Link>
       </div>
     );
@@ -121,7 +121,7 @@ export const Checkout: React.FC = () => {
               <CardContent className="space-y-4">
                 <div>
                   <Label htmlFor="email">Email</Label>
-                  <Input
+                  <Input aria-label="This is an Input field"
                     id="email"
                     name="email"
                     type="email"
@@ -147,7 +147,7 @@ export const Checkout: React.FC = () => {
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <Label htmlFor="firstName">Nombre</Label>
-                    <Input
+                    <Input aria-label="This is an Input field"
                       id="firstName"
                       name="firstName"
                       value={formData.firstName}
@@ -157,7 +157,7 @@ export const Checkout: React.FC = () => {
                   </div>
                   <div>
                     <Label htmlFor="lastName">Apellidos</Label>
-                    <Input
+                    <Input aria-label="This is an Input field"
                       id="lastName"
                       name="lastName"
                       value={formData.lastName}
@@ -169,7 +169,7 @@ export const Checkout: React.FC = () => {
 
                 <div>
                   <Label htmlFor="address">Dirección</Label>
-                  <Input
+                  <Input aria-label="This is an Input field"
                     id="address"
                     name="address"
                     value={formData.address}
@@ -181,7 +181,7 @@ export const Checkout: React.FC = () => {
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <Label htmlFor="city">Ciudad</Label>
-                    <Input
+                    <Input aria-label="This is an Input field"
                       id="city"
                       name="city"
                       value={formData.city}
@@ -191,7 +191,7 @@ export const Checkout: React.FC = () => {
                   </div>
                   <div>
                     <Label htmlFor="postalCode">Código Postal</Label>
-                    <Input
+                    <Input aria-label="This is an Input field"
                       id="postalCode"
                       name="postalCode"
                       value={formData.postalCode}
@@ -203,7 +203,7 @@ export const Checkout: React.FC = () => {
 
                 <div>
                   <Label htmlFor="phone">Teléfono</Label>
-                  <Input
+                  <Input aria-label="This is an Input field"
                     id="phone"
                     name="phone"
                     type="tel"
@@ -243,7 +243,7 @@ export const Checkout: React.FC = () => {
                   <div className="space-y-4 pl-6">
                     <div>
                       <Label htmlFor="cardNumber">Número de Tarjeta</Label>
-                      <Input
+                      <Input aria-label="This is an Input field"
                         id="cardNumber"
                         name="cardNumber"
                         placeholder="1234 5678 9012 3456"
@@ -256,7 +256,7 @@ export const Checkout: React.FC = () => {
                     <div className="grid grid-cols-2 gap-4">
                       <div>
                         <Label htmlFor="expiryDate">Fecha de Expiración</Label>
-                        <Input
+                        <Input aria-label="This is an Input field"
                           id="expiryDate"
                           name="expiryDate"
                           placeholder="MM/AA"
@@ -267,7 +267,7 @@ export const Checkout: React.FC = () => {
                       </div>
                       <div>
                         <Label htmlFor="cvv">CVV</Label>
-                        <Input
+                        <Input aria-label="This is an Input field"
                           id="cvv"
                           name="cvv"
                           placeholder="123"
@@ -392,7 +392,7 @@ export const Checkout: React.FC = () => {
                 </div>
 
                 {/* Submit Button */}
-                <Button
+                <Button aria-label="This is a button"
                   type="submit"
                   className="w-full bg-gradient-accent hover:opacity-90"
                   size="lg"

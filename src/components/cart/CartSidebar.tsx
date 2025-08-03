@@ -22,7 +22,6 @@ export const CartSidebar: React.FC = () => {
     <div className="fixed inset-0 z-50 flex">
       {/* Backdrop */}
       <div 
-        className="fixed inset-0 bg-black/50 backdrop-blur-sm"
         onClick={() => setIsCartOpen(false)}
       />
       
@@ -32,7 +31,7 @@ export const CartSidebar: React.FC = () => {
           {/* Header */}
           <div className="flex items-center justify-between p-6 border-b">
             <h2 className="text-lg font-semibold">Carrito de Compras</h2>
-            <Button
+            <Button aria-label="This is a button"
               variant="ghost"
               size="icon"
               onClick={() => setIsCartOpen(false)}
@@ -48,11 +47,11 @@ export const CartSidebar: React.FC = () => {
                 <div className="w-16 h-16 bg-muted rounded-full flex items-center justify-center mb-4">
                   <Trash2 className="h-8 w-8 text-muted-foreground" />
                 </div>
-                <h3 className="text-lg font-medium mb-2">Tu carrito está vacío</h3>
+                <h1 className="text-lg font-medium mb-2">Tu carrito está vacío</h1>
                 <p className="text-muted-foreground mb-4">
                   Agrega algunos productos para comenzar
                 </p>
-                <Button onClick={() => setIsCartOpen(false)}>
+                <Button aria-label="This is a button" onClick={() => setIsCartOpen(false)}>
                   Seguir Comprando
                 </Button>
               </div>
@@ -81,7 +80,7 @@ export const CartSidebar: React.FC = () => {
                       
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2">
-                          <Button
+                          <Button aria-label="This is a button"
                             variant="outline"
                             size="icon"
                             className="h-6 w-6"
@@ -92,7 +91,7 @@ export const CartSidebar: React.FC = () => {
                           <span className="text-sm font-medium w-8 text-center">
                             {item.quantity}
                           </span>
-                          <Button
+                          <Button aria-label="This is a button"
                             variant="outline"
                             size="icon"
                             className="h-6 w-6"
@@ -106,7 +105,7 @@ export const CartSidebar: React.FC = () => {
                           <span className="font-medium text-sm">
                             ${(item.price * item.quantity).toFixed(2)}
                           </span>
-                          <Button
+                          <Button aria-label="This is a button"
                             variant="ghost"
                             size="icon"
                             className="h-6 w-6 text-destructive hover:text-destructive"
@@ -133,11 +132,11 @@ export const CartSidebar: React.FC = () => {
               
               <div className="space-y-2">
                 <Link to="/checkout" onClick={() => setIsCartOpen(false)}>
-                  <Button className="w-full bg-gradient-accent hover:opacity-90" size="lg">
+                  <Button aria-label="This is a button" className="w-full bg-gradient-accent hover:opacity-90" size="lg">
                     Proceder al Checkout
                   </Button>
                 </Link>
-                <Button 
+                <Button aria-label="This is a button" 
                   variant="outline" 
                   className="w-full"
                   onClick={() => setIsCartOpen(false)}

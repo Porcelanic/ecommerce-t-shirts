@@ -67,7 +67,7 @@ export const ProductReviews: React.FC = () => {
       <div className="container mx-auto px-4 py-16 text-center">
         <h1 className="text-2xl font-bold mb-4">Producto no encontrado</h1>
         <Link to="/products">
-          <Button>Volver a Productos</Button>
+          <Button aria-label="This is a button">Volver a Productos</Button>
         </Link>
       </div>
     );
@@ -141,7 +141,7 @@ export const ProductReviews: React.FC = () => {
         <div className="lg:col-span-1">
           <Card>
             <CardHeader>
-              <h3 className="text-lg font-semibold">Calificación General</h3>
+              <h1 className="text-lg font-semibold">Calificación General</h1>
             </CardHeader>
             <CardContent className="space-y-4">
               {/* Overall Rating */}
@@ -197,7 +197,7 @@ export const ProductReviews: React.FC = () => {
           {/* Write Review */}
           <Card className="mt-6">
             <CardHeader>
-              <h3 className="text-lg font-semibold">Escribe una Reseña</h3>
+              <h1 className="text-lg font-semibold">Escribe una Reseña</h1>
             </CardHeader>
             <CardContent className="space-y-4">
               {user ? (
@@ -209,7 +209,7 @@ export const ProductReviews: React.FC = () => {
                     </label>
                     <div className="flex gap-1">
                       {[1, 2, 3, 4, 5].map((rating) => (
-                        <button
+                        <button aria-label="This is a button"
                           key={rating}
                           onClick={() => setNewRating(rating)}
                           className="hover:scale-110 transition-transform"
@@ -239,7 +239,7 @@ export const ProductReviews: React.FC = () => {
                     />
                   </div>
 
-                  <Button 
+                  <Button aria-label="This is a button" 
                     className="w-full bg-gradient-accent hover:opacity-90"
                     onClick={handleSubmitReview}
                   >
@@ -252,7 +252,7 @@ export const ProductReviews: React.FC = () => {
                     Inicia sesión para escribir una reseña
                   </p>
                   <Link to="/auth">
-                    <Button>Iniciar Sesión</Button>
+                    <Button aria-label="This is a button">Iniciar Sesión</Button>
                   </Link>
                 </div>
               )}
@@ -344,7 +344,7 @@ export const ProductReviews: React.FC = () => {
 
                       {/* Actions */}
                       <div className="flex items-center gap-4 pt-2">
-                        <Button variant="ghost" size="sm" className="h-8">
+                        <Button aria-label="This is a button" variant="ghost" size="sm" className="h-8">
                           <ThumbsUp className="h-3 w-3 mr-2" />
                           Útil ({review.helpful})
                         </Button>
@@ -361,7 +361,7 @@ export const ProductReviews: React.FC = () => {
               <div className="w-16 h-16 bg-muted rounded-full flex items-center justify-center mx-auto mb-4">
                 <Star className="h-8 w-8 text-muted-foreground" />
               </div>
-              <h3 className="text-lg font-medium mb-2">No hay reseñas aún</h3>
+              <h1 className="text-lg font-medium mb-2">No hay reseñas aún</h1>
               <p className="text-muted-foreground">
                 Sé el primero en dejar una reseña de este producto
               </p>

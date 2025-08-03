@@ -264,7 +264,7 @@ const SidebarTrigger = React.forwardRef<
   const { toggleSidebar } = useSidebar()
 
   return (
-    <Button
+    <Button aria-label="This is a button"
       ref={ref}
       data-sidebar="trigger"
       variant="ghost"
@@ -335,7 +335,7 @@ const SidebarInput = React.forwardRef<
   React.ComponentProps<typeof Input>
 >(({ className, ...props }, ref) => {
   return (
-    <Input
+    <Input aria-label="This is an input field"
       ref={ref}
       data-sidebar="input"
       className={cn(

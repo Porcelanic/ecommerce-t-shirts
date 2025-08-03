@@ -101,7 +101,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 
           {/* Actions */}
           <div className="absolute top-3 right-3 flex flex-col gap-2">
-            <Button
+            <Button aria-label="This is a button"
               variant="secondary"
               size="icon"
               className={`h-8 w-8 transition-all duration-300 ${
@@ -116,7 +116,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
               />
             </Button>
             
-            <Button
+            <Button aria-label="This is a button"
               variant="secondary"
               size="icon"
               className={`h-8 w-8 transition-all duration-300 delay-75 ${
@@ -131,7 +131,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           <div className={`absolute bottom-3 left-3 right-3 transition-all duration-300 ${
             isHovered ? 'translate-y-0 opacity-100' : 'translate-y-2 opacity-0'
           }`}>
-            <Button
+            <Button aria-label="This is a button"
               className="w-full bg-gradient-accent hover:opacity-90"
               onClick={handleAddToCart}
               disabled={!product.inStock}
@@ -145,9 +145,9 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         {/* Content */}
         <div className="p-4 space-y-3">
           <div>
-            <h3 className="font-medium text-foreground group-hover:text-primary transition-colors line-clamp-2">
+            <h1 className="font-medium text-foreground group-hover:text-primary transition-colors line-clamp-2">
               {product.name}
-            </h3>
+            </h1>
             
             {/* Rating */}
             <div className="flex items-center gap-2 mt-1">

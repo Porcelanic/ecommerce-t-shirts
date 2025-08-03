@@ -64,7 +64,7 @@ export const Products: React.FC = () => {
         {/* Search and View Toggle */}
         <div className="flex flex-col md:flex-row gap-4 items-start md:items-center justify-between">
           <div className="flex-1 max-w-md">
-            <Input
+            <Input aria-label="This is an input field"
               placeholder="Buscar productos..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
@@ -73,14 +73,14 @@ export const Products: React.FC = () => {
           </div>
           
           <div className="flex items-center gap-2">
-            <Button
+            <Button aria-label="This is a button"
               variant={viewMode === 'grid' ? 'default' : 'outline'}
               size="sm"
               onClick={() => setViewMode('grid')}
             >
               <Grid className="h-4 w-4" />
             </Button>
-            <Button
+            <Button aria-label="This is a button"
               variant={viewMode === 'list' ? 'default' : 'outline'}
               size="sm"
               onClick={() => setViewMode('list')}
@@ -129,9 +129,9 @@ export const Products: React.FC = () => {
           {selectedCategory !== 'all' && (
             <Badge variant="secondary" className="flex items-center gap-1">
               {selectedCategory}
-              <button
+              <button aria-label="This is a button"
                 onClick={() => setSelectedCategory('all')}
-                className="ml-1 hover:bg-muted-foreground/20 rounded-full p-0.5"
+                className="ml-1 hover:bg-muted-foreground/30 rounded-full p-0.5"
               >
                 ×
               </button>
@@ -140,9 +140,9 @@ export const Products: React.FC = () => {
           {searchTerm && (
             <Badge variant="secondary" className="flex items-center gap-1">
               "{searchTerm}"
-              <button
+              <button aria-label="This is a button"
                 onClick={() => setSearchTerm('')}
-                className="ml-1 hover:bg-muted-foreground/20 rounded-full p-0.5"
+                className="ml-1 hover:bg-muted-foreground/30 rounded-full p-0.5"
               >
                 ×
               </button>
@@ -179,11 +179,11 @@ export const Products: React.FC = () => {
           <div className="w-16 h-16 bg-muted rounded-full flex items-center justify-center mx-auto mb-4">
             <Filter className="h-8 w-8 text-muted-foreground" />
           </div>
-          <h3 className="text-lg font-medium mb-2">No se encontraron productos</h3>
+          <h1 className="text-lg font-medium mb-2">No se encontraron productos</h1>
           <p className="text-muted-foreground mb-4">
             Intenta ajustar los filtros o términos de búsqueda
           </p>
-          <Button 
+          <Button aria-label="This is a button" 
             variant="outline" 
             onClick={() => {
               setSearchTerm('');

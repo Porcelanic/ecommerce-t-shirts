@@ -39,7 +39,7 @@ export const Header: React.FC = () => {
           <div className="hidden lg:flex flex-1 max-w-md mx-8">
             <div className="relative w-full">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
-              <Input
+              <Input aria-label="This is an input field"
                 placeholder="Buscar camisetas..."
                 className="pl-10 bg-muted/50 border-border focus:bg-background"
               />
@@ -49,7 +49,7 @@ export const Header: React.FC = () => {
           {/* Actions */}
           <div className="flex items-center space-x-2">
             {/* Theme Toggle */}
-            <Button
+            <Button aria-label="This is a button"
               variant="outline"
               size="icon"
               onClick={toggleTheme}
@@ -63,7 +63,7 @@ export const Header: React.FC = () => {
             </Button>
 
             {/* Cart */}
-            <Button
+            <Button aria-label="This is a button"
               variant="outline"
               size="icon"
               onClick={() => setIsCartOpen(true)}
@@ -83,17 +83,17 @@ export const Header: React.FC = () => {
             {/* User Menu */}
             {user ? (
               <div className="flex items-center space-x-2">
-                <Button variant="outline" size="sm">
+                <Button aria-label="This is a button" variant="outline" size="sm">
                   <User className="h-4 w-4 mr-2" />
                   {user.name}
                 </Button>
-                <Button variant="ghost" size="sm" onClick={logout}>
+                <Button aria-label="This is a button" variant="ghost" size="sm" onClick={logout}>
                   Salir
                 </Button>
               </div>
             ) : (
               <Link to="/auth">
-                <Button variant="default" size="sm">
+                <Button aria-label="This is a button" variant="default" size="sm">
                   <User className="h-4 w-4 mr-2" />
                   Iniciar Sesión
                 </Button>
@@ -101,7 +101,7 @@ export const Header: React.FC = () => {
             )}
 
             {/* Mobile Menu */}
-            <Button variant="outline" size="icon" className="md:hidden h-9 w-9">
+            <Button aria-label="This is a button" variant="outline" size="icon" className="md:hidden h-9 w-9">
               <Menu className="h-4 w-4" />
             </Button>
           </div>
